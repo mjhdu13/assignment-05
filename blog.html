@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+
+  <!-- font setup -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    .poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+    </style>
+
+  <!-- tailwind setup -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- daisyui setup -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- font awesome setup -->
+  <script src="https://kit.fontawesome.com/bf0824ebc6.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="poppins-regular bg-gray-200 py-3">
+  <!-- navbar --> 
+  <nav>
+    <div class="navbar bg-base-100 shadow-sm w-5/6 mx-auto rounded-lg my-5">
+      <div class="flex-1 flex items-center gap-3">
+         <img src="assets/logo.png" alt="">
+         <h1 class="text-2xl">Dev<span class="font-semibold">Board</span></h1>
+      </div>
+      <div class="flex justify-between gap-8">
+        <button class="btn btn-active btn-info w-35 text-white mt-3">Back to Desk</button>
+      </div>
+    </div>
+  </nav>
+  <!-- question Section -->
+  <main class="w-5/6 mx-auto">
+    <div class="text-center text-3xl font-bold">
+      <h1 class="mb-3">Blogs</h1>
+    </div>
+    <!-- Q 1 -->
+    <div class="px-8 pt-10 bg-white my-8">
+      <p class="py-3 text-xl font-semibold">Question-1: What are the different ways to select an element in the DOM?</p>
+      <hr>
+      <p class="py-10">We can select element in the DOM in various ways. Some of the are: getElementById(), getElementsByClassName(), getElementsByClassName(), querySelector(), querySelectorAll() etc.</p>
+    </div>
+    <!-- Q 2 -->
+    <div class="px-8 pt-10 bg-white my-8">
+      <p class="py-3 text-xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+      <hr>
+      <p class="py-10">We can manipulate the HTML within an element by selecting innerHTML. On the other hand, we can manipulate the visible text inside an element by selecting innerText. We use textContent when we need to work with the text content only, if it is visible on not. </p>
+    </div>
+    <!-- Q 3 -->
+    <div class="px-8 pt-10 bg-white my-8">
+      <p class="py-3 text-xl font-semibold">Question-3: What is event delegation in the DOM?</p>
+      <hr>
+      <p class="py-10">I can't remember the answer properly at this moment. But I will definitely recap and learn it.</p>
+    </div>
+    <!-- Q 4 -->
+    <div class="px-8 pt-10 bg-white my-8">
+      <p class="py-3 text-xl font-semibold">Question-4: What is event bubbling in the DOM?</p>
+      <hr>
+      <p class="py-10">I can't remember the answer properly at this moment. But I will definitely recap and learn it.</p>
+    </div>
+    <!-- Q 5 -->
+    <div class="px-8 pt-10 bg-white my-8">
+      <p class="py-3 text-xl font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+      <hr>
+      <p class="py-10">To create element = document.createElement() <br>
+        To add element = appendChild() <br>
+        To remove element = removeChild()
+      </p>
+    </div>
+
+  </main>
+    
+  </body>
+</html>
