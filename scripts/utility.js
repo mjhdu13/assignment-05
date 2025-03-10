@@ -1,8 +1,6 @@
 const sixBoxes = document.getElementById('six-boxes');
 const history = document.getElementById('history');
-
 const boxDivs = sixBoxes.getElementsByTagName('div'); 
-
 const getCountDiv = document.getElementById('task-count-number'); 
 const getCountDivH = document.getElementById('big-number');
 
@@ -27,7 +25,6 @@ for (let singleBox of boxDivs){
     })
 
     btn.setAttribute('disabled', true)
-   
 
     let currentCount = parseInt(getCountDiv.innerText); 
     let updatedCount = currentCount - 1 ; 
@@ -39,15 +36,17 @@ for (let singleBox of boxDivs){
 
     if (updatedCount === 0){
       alert('Congrats! You have completed all the current tasks')
-    }
-    
+    } 
   });
-
 }
 
-// theme changing
     const themeChangingBtn = document.getElementById('theme-changing-btn');
     themeChangingBtn.addEventListener('click', function(){
       const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); 
       document.body.style.background = randomColor;
-    });  
+    }); 
+    
+const currentTimestamp = Date.now(); 
+const currentDate = new Date(currentTimestamp);
+const formattedDate = currentDate.toLocaleDateString('en-US');
+document.getElementById('date-display').textContent =formattedDate;
