@@ -11,9 +11,10 @@ for (let singleBox of boxDivs){
   btn.addEventListener('click', function() {
     const activityLog =document.createElement('p');
     const divText = singleBox.querySelector('h1').textContent;
-    activityLog.innerText = 'you have selected ' + divText + '(Ekhane click korar time ta bosbe)'; 
-    // uporer line e time er formula bosalei kaj ok.
+    activityLog.innerText = 'you have selected '+ divText + 'at 10:17:35'; 
+    
     alert('Board Updated Successfully')
+    
     history.append(activityLog); 
     activityLog.style.backgroundColor = 'lightGray';
     activityLog.style.margin = '5px';
@@ -26,15 +27,22 @@ for (let singleBox of boxDivs){
     })
 
     btn.setAttribute('disabled', true)
+   
 
     let currentCount = parseInt(getCountDiv.innerText); 
     let updatedCount = currentCount - 1 ; 
-    getCountDiv.innerText = updatedCount;
+    getCountDiv.innerText = updatedCount; 
 
     let currentCountH = parseInt(getCountDivH.innerText); 
     let updatedCountH = currentCountH + 1 ; 
     getCountDivH.innerText = updatedCountH;
+
+    if (updatedCount === 0){
+      alert('Congrats! You have completed all the current tasks')
+    }
+    
   });
+
 }
 
 // theme changing
@@ -42,4 +50,4 @@ for (let singleBox of boxDivs){
     themeChangingBtn.addEventListener('click', function(){
       const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); 
       document.body.style.background = randomColor;
-    });
+    });  
