@@ -6,10 +6,6 @@ const boxDivs = sixBoxes.getElementsByTagName('div');
 const getCountDiv = document.getElementById('task-count-number'); 
 const getCountDivH = document.getElementById('big-number');
 
-// const buttons = document.querySelectorAll('.btn')
-// console.log(buttons);
-// console.log(boxDivs);
-
 for (let singleBox of boxDivs){
   const btn = singleBox.querySelector('button')
   btn.addEventListener('click', function() {
@@ -18,9 +14,17 @@ for (let singleBox of boxDivs){
     activityLog.innerText = 'you have selected ' + divText + '(Ekhane click korar time ta bosbe)'; 
     // uporer line e time er formula bosalei kaj ok.
     alert('Board Updated Successfully')
-    history.append(activityLog);
-    // notification gulor bg color and margin + padding dite hobe
-    // activityLog.style.backgroundColor=('yellow')
+    history.append(activityLog); 
+    activityLog.style.backgroundColor = 'lightGray';
+    activityLog.style.margin = '5px';
+    activityLog.style.padding = '2px';
+
+    let clearHistoryBtn = document.getElementById('clear-history') 
+    clearHistoryBtn.addEventListener('click', function(){
+      let clean = activityLog
+      clean.style.display = 'none';
+    })
+
     btn.setAttribute('disabled', true)
 
     let currentCount = parseInt(getCountDiv.innerText); 
@@ -33,6 +37,9 @@ for (let singleBox of boxDivs){
   });
 }
 
-// if(currentCount === 0){
-    //   alert('YEEEESSSSS')
-    // }
+// theme changing
+    const themeChangingBtn = document.getElementById('theme-changing-btn');
+    themeChangingBtn.addEventListener('click', function(){
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); 
+      document.body.style.background = randomColor;
+    });
